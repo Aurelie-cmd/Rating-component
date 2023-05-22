@@ -36,12 +36,12 @@ body {
 
 .main-container {
     width: min(90%,34rem);
-    margin:auto;
+     margin:auto;
     background-color:var(--Dark-Blue);
     color:rgb(255, 255, 255);
     padding: 20px;
     border-radius: var(--main-radius);
-    height: 36rem;
+    height: min(content,36rem);
     display: flex;
     justify-content: space-between;
 
@@ -84,7 +84,7 @@ p {
 }
 
 .star {
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     padding: 15px;
 }
 
@@ -114,6 +114,14 @@ p {
     }
   }
 
+  @media screen and (max-width: 300px) {
+    .round {
+        height: 10px;
+        width: 10px;
+        padding: 15px;
+    }
+  }
+
 .submit-button:hover{
     background-color: white;
     color: var(--accent-color);
@@ -125,10 +133,10 @@ p {
     color: white;
 } 
 
-.vote:hover {
+.vote:hover:not(.selected) {
     color: white;
     background-color: var(--accent-color);
-}
+} 
 
 
 
