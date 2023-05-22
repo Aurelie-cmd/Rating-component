@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/index-stylesheet.css">
+
+</head>
+<body>
+    <script src="script.js"></script>
+  <div  id="rating-container" class="card main-container">      
+    <div class="card-body wrapper">
+      <div class="round star"> 
+        <img src="images/icon-star.svg" class="card-img-top icon" alt="icon-star">
+      </div>
+      <h1 class="card-title">How did we do?</h1>
+
+      <p class="card-text">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <div class="vote-button">
+        <p class="round vote" data-rating="1">1</p>
+        <p class="round vote" data-rating="2">2</p>
+        <p class="round vote" data-rating="3">3</p>
+        <p class="round vote" data-rating="4">4</p>
+        <p class="round vote" data-rating="5">5</p>
+      </div>
+          
+      <!-- <form action="thankyou.html" method="post" id="feedback-form"> -->
+        <input type="hidden" hidden name="rating" id="rating-input" />
+        <button id="submit-btn" class="btn btn-primary submit-button" >Submit</button>
+      <!-- </form> -->
+      
+
+    </div>
+
+  </div>
+
+  <div  id="submit-container" class="card text-center main-container inactive">      
+    <div class="card-body body-submit"> 
+      <img src="images/illustration-thank-you.svg" class="card-img-top image-post mx-auto" alt="...">
+    
+    
+      <div class="result">You selected <span id="fetched-rating">Add rating here</span> out of 5</div>
+      <h1 class="card-title">Thank you!</h1>
+
+      <p class="card-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+
+
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
+
